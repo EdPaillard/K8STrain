@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boug-server-deploy
+  labels:
+    app: boug-server
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: boug-server
+  template:
+    metadata:
+      labels:
+        app: boug-server
+    spec:
+      containers:
+      - name: boug-server
+        image: 162.19.66.30:7000/boug_server:latest
+        ports:
+        - containerPort: 5000
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boug-client-deploy
+  labels:
+    app: boug-client
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: boug-client
+  template:
+    metadata:
+      labels:
+        app: boug-client
+    spec:
+      containers:
+      - name: boug-client
+        image: 162.19.66.30:7000/boug_client:latest
+        ports:
+        - containerPort: 3000
+
+  
