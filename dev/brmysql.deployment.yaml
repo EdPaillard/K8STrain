@@ -21,10 +21,10 @@ spec:
           - containerPort: 3306
         env:
           - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: brmysql-secret
-                  key: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                name: brmysql-secret
+                key: MYSQL_USER
           - name: MYSQL_PASSWORD
             valueFrom:
               secretKeyRef:
