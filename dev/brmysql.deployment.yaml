@@ -32,17 +32,17 @@ spec:
                 key: MYSQL_PASSWORD
           - name: MYSQL_HOST
             valueFrom:
-              secretKeyRef:
+              configMapKeyRef:
                 name: brmysql-configmap
                 key: MYSQL_HOST
           - name: MYSQL_DATABASE
             valueFrom:
-              secretKeyRef:
+              configMapKeyRef:
                 name: brmysql-configmap
                 key: MYSQL_DATABASE
           - name: MYSQL_TCP_PORT
             valueFrom:
-              secretKeyRef:
+              configMapKeyRef:
                 name: brmysql-configmap
                 key: MYSQL_TCP_PORT
         volumeMounts:
