@@ -6,7 +6,7 @@ metadata:
     app: boug-server
   namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: boug-server
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: boug-server
-        image: 162.19.66.30:7000/boug_server:latest
+        image: localhost:7000/boug_server:latest
         ports:
         - containerPort: 5000
 
@@ -30,7 +30,7 @@ metadata:
     app: boug-client
   namespace: default
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: boug-client
@@ -41,8 +41,8 @@ spec:
     spec:
       containers:
       - name: boug-client
-        image: 162.19.66.30:7000/boug_client:latest
+        image: localhost:7000/boug_client:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
 
   
