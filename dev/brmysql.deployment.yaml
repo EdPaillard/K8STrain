@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: brmysql
-        image: mysql:5.7.38
+        image: mysql:5.6
         ports:
           - containerPort: 3306
         env:
@@ -51,7 +51,7 @@ spec:
                 name: brmysql-configmap
                 key: MYSQL_TCP_PORT
         volumeMounts:
-        - mountPath: "/var/lib/mysql/data"
+        - mountPath: "/var/lib/mysql-files/data"
           name: brmysql-pv
       volumes:
         - name: brmysql-pv
