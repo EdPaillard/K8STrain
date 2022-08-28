@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: argocd-ingress
+  labels:
+    app: ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: argocd
+  namespace: argocd
+spec:
+  rules:
+  - host: argocd.dashboard
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port: 
+              number: 8080
+  tls:
+  - hosts:
+    - argocd.dashboard
+    secretName: argocd-secret
