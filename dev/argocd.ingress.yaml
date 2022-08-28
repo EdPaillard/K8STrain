@@ -9,7 +9,7 @@ metadata:
   namespace: argocd
 spec:
   rules:
-  - host: argocd.dashboard
+  - host: argocd-dashboard
     http:
       paths:
       - path: /
