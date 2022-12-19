@@ -5,6 +5,7 @@ metadata:
   labels:
     type: local
     app: brmysql
+  namespace: becomerich
 spec:
   storageClassName: brmysql-storage
   capacity:
@@ -22,6 +23,7 @@ metadata:
   name: brmysql-pvc
   labels:
     app: brmysql
+  namespace: becomerich
 spec:
   storageClassName: brmysql-storage
   accessModes:
