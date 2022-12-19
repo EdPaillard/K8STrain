@@ -8,6 +8,9 @@ metadata:
   namespace: becomerich
 spec:
   storageClassName: brmysql-storage
+  claimeRef:
+    name: brmysql-pvc
+    namespace: becomerich
   capacity:
     storage: 10Gi
   accessModes:
