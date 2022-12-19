@@ -4,7 +4,7 @@ metadata:
   name: boug-server-deploy
   labels:
     app: boug-server
-  namespace: default
+  namespace: bougainville
 spec:
   replicas: 1
   selector:
@@ -28,7 +28,7 @@ metadata:
   name: boug-client-deploy
   labels:
     app: boug-client
-  namespace: default
+  namespace: bougainville
 spec:
   replicas: 1
   selector:

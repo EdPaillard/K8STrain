@@ -4,7 +4,7 @@ metadata:
   name: bgs-service
   labels:
     app: bgs-service
-  namespace: default
+  namespace: bougainville
 spec:
   selector:
     app: boug-server
@@ -20,6 +20,7 @@ metadata:
   name: bgc-service
   labels:
     app: bgc-service
+  namespace: bougainville
 spec:
   selector:
       app: boug-client
