@@ -4,6 +4,7 @@ metadata:
   name: br-backend
   labels:
     app: br-backend
+  namespace: becomerich
 spec:
   replicas: 1
   selector:

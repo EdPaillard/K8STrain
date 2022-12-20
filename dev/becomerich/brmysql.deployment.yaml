@@ -4,6 +4,7 @@ metadata:
   name: brmysql
   labels:
     app: brmysql
+  namespace: becomerich
 spec:
   replicas: 1
   selector:
